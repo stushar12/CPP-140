@@ -11,11 +11,11 @@ int main() {
 	    int c2=0;
 	    for(int i=0;i<s.length();i++)
 	    {
-	        if(i%2==0 && s[i]=='0')c1++;                //following 01010101010.... pattern
-	        else if(i%2!=0 && s[i]=='1')c1++;           //0 at even places and 1 at odd places
+	        if((i%2==0 && s[i]=='0')||(i%2!=0 && s[i]=='1'))              //following 01010101010.... pattern
+	      	 c1++;  							 //0 at even places and 1 at odd places
 	        
-            if(i%2==0 && s[i]=='1')c2++;                //following 101010101010.... pattern
-	        else if(i%2!=0 && s[i]=='0')c2++;	//1 at even places and 0 at odd places
+            else if((i%2==0 && s[i]=='1')||(i%2!=0 && s[i]=='0'))            //following 101010101010.... pattern
+	        c2++;								//1 at even places and 0 at odd places
 	    }
 	   int mini =min(c1,c2);			//minimum swaps
 	   cout<<mini<<endl;
