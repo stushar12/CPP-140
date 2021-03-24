@@ -1,5 +1,5 @@
 # CPP-140
-Minimum number of flips
+Minimum number of flips to make binary string alternate
 
 
 
